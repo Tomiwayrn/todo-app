@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    transition: 0.6s ease-in-out;
+}
+
+:root{
+    /* Primary */
+
+--brightBlue: hsl(220, 98%, 61%);
+--white: #fff;
+--checkedBackground: linear-gradient( to right, hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+}
+
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    align-items: center;
+}
+
+button{
+    background: unset;
+    border: unset;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    padding: .25rem 1rem;
+    color: var(--color-text);
+}
+
+
+button:hover {
+    transition: all 0.5s ease;
+    opacity: 0.5;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg);
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--color-text);
+    font-size: 16px;
+}
+
+header{
+    height: 35%;
+    width: 100%;
+     background: var(--desktop-url); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  
+}
+.app{
+    position:absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    margin: 0 auto;
+    max-width: 460px;
+    justify-content: center;    
+}
+
+
+.header{
+
+    width: 100%;
+}
+
+.header h1{
+    color: var(--white) ;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 700;
+}
+
+.dark-button{
+    display: var(--switchdark);
+    transition: 0.5s ease-in;
+}
+
+.light-button{
+    transition: 0.6s ease-in;
+    display: var(--switchlight);
+}
+
+ 
+article{
+    
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 7rem;
+    position: absolute;
+    color: var(--color-text-faint);
+    font-weight: bold;
+}
+
+/* input */
+
+.input-container,.todo,.todo-footer,.todo-functionality{
+     background: var(--bg-panel); 
+    color: var(--color-text);
+    height: 50px;
+    padding: 5px 6px;
+    border-radius: 5px;
+    border: 1px solid var(--boxshadow);
+    border-bottom: 1px solid  var(--border);
+
+    
+    
+}
+
+.input-container{
+    margin-bottom: 15px;
+    position: relative;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px var(--boxshadow);
+}
+
+.ErrMessage {
+    position: absolute;
+    top: -35%;
+    font-size: 14px;
+    color: var(--bg-panel);
+    opacity: 0.8;
+}
+
+.main-part {
+    width: 100%;
+    margin: 0 auto;
+   
+}
+
+
+
+
+.input{
+    background: unset;
+    height: 100%;
+   width: 100%;
+    border: unset;
+    outline: unset;
+    font-family: inherit;
+    color: Var(--color-text-faint);
+    font-size: 1rem;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+
+.todo-container{
+    margin-top: 10px;
+    position: relative;
+    
+}
+
+.toggle-btn {
+    border: none;
+    background: none;
+    border-radius: 100%;
+     padding: 2px 4px; 
+    border: 1px solid var(--border);
+}
+
+.toggle-btn img {
+    opacity: 0.3; 
+    
+  
+}
+
+.active-submit {
+    transition: 0.5s ease-in;
+    background: var(--checkedBackground);
+}
+
+
+
+
+/* show toggle btn bg */
+.show-bg{
+    background-color: var(--checkBackground);
+}
+
+
+
+.todo.checked .todo-title{
+    text-decoration: line-through;
+    color: var(--veryLightGray);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: var(--color-text-faint);
+    transition: none;
+}
+
+.check,.delete-icon{
+    cursor: pointer;
+}
+
+
+
+
+.todo{
+   
+    list-style-type: none;
+    border-radius: unset;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid  var(--border);
+    
+}
+
+.todo.hide{
+    display: none;
+}
+
+.todo-value{
+    flex: 1;
+}
+
+
+
+.todo-container {
+    box-shadow: 0px -7px 30px var(--boxshadow);
+}
+
+
+.todo-functionality{
+    margin-top: -3px;
+    border-radius: 0px 0px  5px 5px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 13px;
+    align-items: center;
+    box-shadow: 3px 3px 30px var(--boxshadow);
+    color: var(--color-text-faint);
+}
+
+.todo-functionality button {
+    color: var(--color-text-faint);
+}
+.clear-btn {
+    font-size: 12px;
+}
+
+
+
+/* app footer */
+.todo-footer{
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    margin-top: 30px;
+    box-shadow: 0px 0px 20px var(--boxshadow);
+   
+}
+
+.todo-footer button{
+    color: var(--color-text-faint);
+}
+
+.todo-footer .button:hover{
+    color: var(--brightBlue);
+    opacity: 1;
+    font-weight: bold;
+    transition: .5s ease-in;
+}
+
+
+
+
+
+footer {
+    position: relative;
+    bottom: -150%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+
+/* color-schemes */
+
+:root[color-scheme = 'dark']{
+        
+            
+    --boxshadow: rgba(63, 62, 62, 0.3);
+    --bg: hsl(235, 21%, 11%);
+    --bg-panel: hsl(235, 24%, 19%);
+    --border: hsl(231, 13%, 25%);
+    --color-text: #fff;
+    --color-text-faint: hsl(236, 9%, 61%);
+    --desktop-url: url(./images/bg-desktop-dark.jpg);
+    --switchlight : block;
+    --switchdark : none;
+    }
+
+
+:root[color-scheme= 'light']{
+    --bg: var(--white);
+    --border:var(--veryLightGrayishBlue);
+    --bg-panel:var(--white); 
+     --boxshadow: rgba(150, 150, 150, 0.2);
+     --color-text-faint: hsl(236, 9%, 61%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --veryLightGrayishBlue: hsl(236, 33%, 92%);
+    --lightGrayishBlue: hsl(233, 11%, 84%);
+    --darkGrayishBlue: hsl(236, 9%, 61%);
+    --veryDarkGrayishBlue: hsl(235, 19%, 35%);
+    --desktop-url: url(./images/bg-desktop-light.jpg);
+    --switchlight : none;
+    --switchdark : block;
+        }
+
+
+
+@media(prefers-color-scheme: light){
+    :root{
+   
+        /* LightmodeTheme */
+        
+        /* --boxshadow: rgba(201, 201, 201, 0.3); */
+        --bg: var(--white);
+     --border:var(--veryLightGrayishBlue);
+    --bg-panel:var(--white); 
+     --boxshadow: rgba(150, 150, 150, 0.2);
+     --color-text-faint: hsl(236, 9%, 61%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --veryLightGrayishBlue: hsl(236, 33%, 92%);
+    --lightGrayishBlue: hsl(233, 11%, 84%);
+    --darkGrayishBlue: hsl(236, 9%, 61%);
+    --veryDarkGrayishBlue: hsl(235, 19%, 35%);
+    --desktop-url: url(./images/bg-desktop-light.jpg);
+    --switchlight : none;
+    --switchdark : block;
+        }
+
+           
+
+    
+
+}
+
+@media(prefers-color-scheme:dark){
+    
+            
+    :root{
+             
+        --boxshadow: rgba(41, 41, 41, 0.3);
+        --bg: hsl(235, 21%, 11%);
+        --bg-panel: hsl(235, 24%, 19%);
+        --border: hsl(233, 14%, 35%);
+        --color-text: #fff;
+        -switchlight : block;
+         --switchdark : none;
+        --desktop-url: url(./images/bg-desktop-dark.jpg);
+        --color-text-faint: hsl(236, 9%, 61%);
+            
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) {
+    .app{
+        width: 50%;
+        min-width: 480px;
+        top: 15%;
+    }
+
+    header {
+        height: 40%;
+    }
+
+    .header {
+        margin-bottom: 25px;
+    }
+    
+
+    .input-container{
+        margin-bottom: 20px;
+    }
+
+    .todo-footer {
+        position: relative;
+        box-shadow: none;
+        margin-top: 0px;
+    }
+
+     .todo-functionality{
+        position: absolute;  
+        background: transparent;
+        margin-left: 5%;
+        margin-top: .05rem;
+        align-items: center;
+        width: 95%;
+        justify-content: space-between;
+        border-bottom: none;
+        border: none;
+      
+    } 
+
+    .todo-functionality p,
+    .todo-functionality button {
+        position: absolute;
+        z-index: 10;
+        width: 27%;
+    
+    
+        
+    }
+
+    .todo-functionality button {
+         margin-left: 67%; 
+    }
+    
+  }
+
+
+
