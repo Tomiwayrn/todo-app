@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <header>
+    <!-- background image goes in here -->
+  </header>
+
+  <main class="app">
+    <!-- app header -->
+    <section>
+    <div class="header flex">
+      <h1>Todo</h1>
+      <div >
+        <button class="button dark-button">
+          <img src="./images/icon-moon.svg" alt="">
+        </button>
+        <button class="button light-button">
+          <img src="./images/icon-sun.svg" alt="">
+        </button>
+        <audio class="audio" src="./light-switch.mp3"></audio>
+      </div>
+    </div>
+  </section>
+
+    <!-- input -->
+   <section class="main-part"> 
+    <div class="input-container flex">
+       <span class="ErrMessage"></span>
+      <form action="#">
+        <button type="submit" class="toggle-btn submit"><img src="./images/icon-check.svg" alt="check"></button>
+        <input class="input" type="text" class="input" placeholder="Currently typing...">
+      </form>
+    </div>
+    <!-- lists goes fromm js here  -->
+    <ul class="todo-container">
+      
+
+    </ul>
+
+
+    <div class="todo-functionality">
+      <p> <span class="task-left"></span>Items Left</p>
+      <button class="clear-btn">Clear Completed</button>
+    </div>
+
+    <div class="todo-footer action-box flex">
+      <button class="button allBtn">All</button>
+      <button class="button activeBtn">Active</button>
+      <button class="button completedBtn">Completed</button>
+    </div>
+
+    <article>
+      <p>Drag and drop to order list</p>
+    </article>
+  
+  </section>
+  </main>
+
+  
+<footer>
+  <div class="attribution">
+    Challenge by <a href="mailto:afolabiquavious@gmail.com" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Afolabi Tomiwa</a>.
+  </div> 
+</footer>
+  <script src="./app.js"></script>
+</body>
+</html>
